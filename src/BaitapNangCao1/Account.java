@@ -65,23 +65,54 @@ public class Account {
             System.out.println("Số tiền invalid, thanh toán không thành công");
         }
     }
-    public void transfer( Account account, int transfer){
+    public void transfer( Account account){
         int amountA;
-        int amountB;
+        int amountB = 0;
         Account account2 = account;
 //        System.out.println(" Mời bạn nhập số tài khoản của người nhận");
 //        Scanner scanner = new Scanner(System.in);
  //       account2 = scanner.nextLine();
 //        System.out.println("Mời bạn nhập số tiền:");
  //       c = scanner.nextInt();
-        if (transfer<= amount2){
-            amountA = amount2 -transfer;
-            amountB = account.getBalance() + transfer;
+        if (transfer1<= amount2){
+            amountA = amount2 -transfer1;
+            amountB = account.getBalance() + transfer1;
             System.out.println("Chuyển khoản thành công. Số dư hiện tại của A là: "+ amountA);
         }else {
             System.out.println("Nhập số tiền nhỏ hơn"+amount2);
         }
         System.out.println("Số dư hiện tại của B là:" + amountB);
+    }
 
+
+
+
+    public int showMenu(){
+        System.out.println("Chào mừng quý khách. Hãy chọn 1 trong các option:");
+        System.out.println("1. Chuyển tiền");
+        System.out.println("2. Nộp tiền");
+        System.out.println("3. Rút tiền");
+        System.out.println("4. Exit");
+        int n;
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        return  n;
+    }
+
+    public void action(int n, Account accountB) {
+        switch (n){
+            case 1:
+                transfer(accountB);
+                break;
+            case 2:
+                credit();
+                break;
+            case 3:
+                debit();
+                break;
+            default:
+                System.out.println("something ");
+                break;
+        }
     }
 }
