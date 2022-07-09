@@ -74,14 +74,14 @@ public class Account {
  //       account2 = scanner.nextLine();
 //        System.out.println("Mời bạn nhập số tiền:");
  //       c = scanner.nextInt();
-        if (transfer1<= amount2){
-            amountA = amount2 -transfer1;
-            amountB = account.getBalance() + transfer1;
-            System.out.println("Chuyển khoản thành công. Số dư hiện tại của A là: "+ amountA);
-        }else {
-            System.out.println("Nhập số tiền nhỏ hơn"+amount2);
-        }
-        System.out.println("Số dư hiện tại của B là:" + amountB);
+//        if (transfer<= amount2){
+//            amountA = amount2 -transfer;
+//            amountB = account.getBalance() + transfer;
+//            System.out.println("Chuyển khoản thành công. Số dư hiện tại của A là: "+ amountA);
+//        }else {
+//            System.out.println("Nhập số tiền nhỏ hơn"+amount2);
+//        }
+//        System.out.println("Số dư hiện tại của B là:" + amountB);
     }
 
 
