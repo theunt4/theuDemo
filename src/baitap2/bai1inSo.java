@@ -224,12 +224,48 @@ public class bai1inSo {
         String s3 = s1.concat(s2);
         System.out.println(s3);
         // kiểm tra chuỗi có đối xứng hay ko: chưa làm được
+        String s1Reverse = "";
+        //Tương tự với mảng, duyệt ngược lại để đảo ngược xâu
+        for (int i = s1.length() - 1; i >= 0; i--) {
+            s1Reverse = s1Reverse + s1.charAt(i);
+        }
+        if (s1Reverse.equals(s2)) {
+            System.out.println("Hai chuỗi là đảo được của nhau");
+        } else
+        System.out.println("Hai chuỗi không phải là đảo ngược của nhau");
         //kiểm tra chuỗi có kí tự số  hay không
+        System.out.println("Chuỗi sau khi remove phần tử số là: " + s3.replaceAll("\\d", ""));
 
 
     }
-    public static void BaiC2(){
-        String s1 = "Hello admin 1, this is  ";
+    public static void BaiC2() {
+        String wording = "Hello Julie 1, this is Monday morning.";
+        int no_u = 0;
+        int no_e = 0;
+        int no_o = 0;
+        int no_a = 0;
+        int no_i = 0;
+        for (int j = 0; j < wording.length(); j++) {
+            if (wording.charAt(j) == 'u') {
+                no_u++;
+            } else if (wording.charAt(j) == 'e') {
+                no_e++;
+            } else if (wording.charAt(j) == 'o') {
+                no_o++;
+            } else if (wording.charAt(j) == 'a') {
+                no_a++;
+            } else if (wording.charAt(j) == 'i') {
+                no_i++;
+            }
+
+        }
+        System.out.println("SL nguyên âm u=:" + no_u);
+        System.out.println("SL nguyên âm e=:" + no_e);
+        System.out.println("SL nguyên âm o=:" + no_o);
+        System.out.println("SL nguyên âm a=:" + no_a);
+        System.out.println("SL nguyên âm i=:" + no_i);
+
+        //Xóa kí tự số: chưa làm dk
     }
     public static void main(String[] args) {
 //        Bai1();
@@ -241,7 +277,8 @@ public class bai1inSo {
 //        Baim2();
 //        Baim3();
 //        Baim4();
-        BaiC1();
+//        BaiC1();
+        BaiC2();
 
     }
 }
